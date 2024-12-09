@@ -21,7 +21,7 @@ function Explorer({ data }) {
         : typeof explorerData === "object"
         ? Object.keys(explorerData).map((item) =>
             explorerData[item] === null ? (
-              <File key={item} title={item + "pppo"} />
+              <File key={item} title={item} />
             ) : (
               <Folder key={item} data={explorerData[item]} title={item} />
             )
