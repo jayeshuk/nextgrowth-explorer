@@ -16,6 +16,17 @@
     align-items: center;
 }
 
+.input-container {
+    display: flex;
+    align-items: center;
+}
+
+.input {
+    margin: 4px 0px 4px 5px;
+    font-size: 20px;
+    outline: none;
+}
+
 .content-container {
     display: flex;
     flex-direction: column;
@@ -23,6 +34,6 @@
     margin-left: 20px;
 }
 
-.title {
+.folder-title {
     margin-left: 10px
 }

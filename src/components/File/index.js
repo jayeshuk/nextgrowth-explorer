@@ -1,6 +1,5 @@
 import React from "react";
 import { FcFile } from "react-icons/fc";
-
 import "./styles.css";
 
 function File({ title }) {

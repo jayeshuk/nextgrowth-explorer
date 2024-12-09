@@ -14,18 +14,22 @@ const globalData = {
 
 function Explorer({ data }) {
   const [explorerData] = useState(data || globalData);
+
+  const renderFile = (item) => <File key={item} title={item} />;
+
+  const renderFileOrFolder = (item) =>
+    explorerData[item] === null ? (
+      <File key={item} title={item} />
+    ) : (
+      <Folder key={item} data={explorerData[item]} title={item} />
+    );
+
   return (
     <div>
       {Array.isArray(explorerData)
-        ? explorerData.map((item) => <File key={item} title={item} />)
-        : typeof explorerData === "object"
-        ? Object.keys(explorerData).map((item) =>
-            explorerData[item] === null ? (
-              <File key={item} title={item} />
-            ) : (
-              <Folder key={item} data={explorerData[item]} title={item} />
-            )
-          )
+        ? explorerData.map(renderFile)
+        : typeof explorerData === "object" && explorerData !== null
+        ? Object.keys(explorerData).map(renderFileOrFolder)
         : null}
     </div>
   );
