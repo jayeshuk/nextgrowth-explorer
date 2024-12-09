@@ -17,11 +17,15 @@ function Explorer({ data }) {
   return (
     <div>
       {Array.isArray(explorerData)
-        ? explorerData.map((item, index) => <File key={index} title={item} />)
+        ? explorerData.map((item) => <File key={item} title={item} />)
         : typeof explorerData === "object"
-        ? Object.keys(explorerData).map((item) => (
-            <Folder key={item} data={explorerData[item]} title={item} />
-          ))
+        ? Object.keys(explorerData).map((item) =>
+            explorerData[item] === null ? (
+              <File key={item} title={item + "pppo"} />
+            ) : (
+              <Folder key={item} data={explorerData[item]} title={item} />
+            )
+          )
         : null}
     </div>
   );

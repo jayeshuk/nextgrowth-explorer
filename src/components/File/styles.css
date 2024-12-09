@@ -1,0 +1,9 @@
+.file-container {
+    margin: 2px 0px;
+    display: flex;
+    align-items: center;
+}
+
+.file-title {
+    margin-left: 5px;
+}

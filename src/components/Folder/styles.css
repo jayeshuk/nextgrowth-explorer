@@ -1,9 +1,17 @@
-.container {
+.folder-container {
     display: flex;
     flex-direction: column;
+    margin: 4px auto;
 }
 
 .title-container {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    width: 300px;
+}
+
+.title-sub-container {
     display: flex;
     align-items: center;
 }
@@ -12,7 +20,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-left: 10px;
+    margin-left: 20px;
 }
 
 .title {

@@ -1,10 +1,12 @@
 import React from "react";
-import { FaFile } from "react-icons/fa";
+import { FcFile } from "react-icons/fc";
+
+import "./styles.css";
 
 function File({ title }) {
   return (
-    <div>
-      <FaFile /> <span>{title}</span>
+    <div className="file-container">
+      <FcFile /> <span className="file-title">{title}</span>
     </div>
   );
 }
